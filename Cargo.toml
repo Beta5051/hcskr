@@ -1,17 +1,19 @@
 [package]
 name = "hcskr"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Beta5051 <beta5051@gmail.com>"]
 description = "rust 언어 교육청 자가진단 라이브러리"
 repository = "https://github.com/Beta5051/hcskr"
 license = "MIT"
 keywords = ["hcs", "self-check"]
 categories = ["api-bindings", "network-programming"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
-reqwest = { version = "0.11.4", features = ["blocking", "json"]}
-serde = { version = "1.0.117", features = ["derive"]}
-serde_json = "1.0.59"
-openssl = { version = "0.10", features = ["vendored"] }
+rsa = "0.5.0"
+rand = "0.8.4"
 base64 = "0.13.0"
+reqwest = { version = "0.11.8", features = ["json"] }
+tokio = { version = "1.15.0", features = ["full"] }
+serde = { version = "1.0.126", features = ["derive"] }
+common_macros = "0.1.1"
